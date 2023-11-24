@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"  href="favicon-32x32.png">
+    <title>Form App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="mainDiv">
+        <h1 class="title">Registration Form <span><a href="index.html">📋</a></span></h1>
+        <form id="form" novalidate>
+            <div class="form-group">
+                <label>Name</label>
+                <span class="required">*</span>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required minlength="3" maxlength="20">
+            </div>
+
+            <div class="form-group">
+                <label>Surname</label>
+                <span class="required">*</span>
+                <input type="text" id="surname" name="surname" placeholder="Enter your Surname" required minlength="3" maxlength="20">
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <span class="required">*</span>
+                <input type="email" id="email" name="email" placeholder="x@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <span class="required">*</span>
+                <input type="tel" id="phone" name="phone" placeholder="222-222-2222" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <span class="required">*</span>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+
+            <div class="form-group">
+                <label>Password Repeat</label>
+                <span class="required">*</span>
+                <input type="password" id="repassword" name="repassword" placeholder="Repeating your password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <span class="required">*</span>
+                <textarea type="text" id="address" name="address" placeholder="Enter address" rows="6" required></textarea>
+            </div>
+            <button class="submit">Register</button>
+        </form>
+
+        <div class="alertMessage">
+            <h3 id="alertTitle">Please Fill in All Fields!</h3>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
